@@ -91,6 +91,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         }
     }
 
+    // Check apakah diberikan akses
     private fun hasLocationPermission() =
         ContextCompat.checkSelfPermission(requireContext(), ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
 
@@ -103,11 +104,13 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             .create().show()
     }
 
+    // Ubah map location
     private fun updateMapLocation(location: LatLng) {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
             location, 7f))
     }
 
+    // Untuk masukin text
     private fun showAddMarkerDialog(latLng: LatLng) {
         val titleInput = EditText(requireContext()).apply {
             hint = "Masukkan judul"
