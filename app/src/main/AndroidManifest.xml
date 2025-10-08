@@ -20,7 +20,7 @@
         android:theme="@style/Theme.MiniProject_KelompokG">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBtSUqlOOTRl0gOpX7OrzVPWxW8U4M10P0"/>
+            android:value="${MAPS_API_KEY}"/>
 
         <activity
             android:name=".MainActivity"
